@@ -23,13 +23,15 @@
     position: relative;
     padding-bottom: 20px;
     color: #37517e;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 .title_wj::before {
     content: "";
     position: absolute;
     display: block;
-    width: 110px;
+    width: 160px;
     height: 1px;
     background: #444444;
     opacity: 0.3;
@@ -43,7 +45,7 @@
     content: "";
     position: absolute;
     display: block;
-    width: 40px;
+    width: 60px;
     height: 3px;
     background: #47b2e4;
     left: 0;
@@ -72,8 +74,13 @@
     padding-left: 30px;
     padding-right: 100px;
     padding-block: 50px;
-    border-radius: 6px;
-    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1)
+    border-radius: 5px;
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #f5f6f8;
+}
+
+.items_main_wj {
+    border-top-color: #47b2e4;
 }
 
 .itemPrice_wj {
@@ -115,6 +122,8 @@
 }
 
 .discription_wj {
+    display: flex;
+    align-items: center;
     list-style-type: none;
     font-weight: 10;
     font-size: 15px;
@@ -130,6 +139,8 @@
     color: #47b2e4;
     font-weight: 600;
     font-size: 12px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .buyButton__selected_wj {
@@ -142,8 +153,30 @@
     color: white;
     font-weight: 600;
     font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+.discription_wj .bi-check {
+    color: #059652;
 }
 
+.discription_wj span {
+    color: #444444;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.discription_wj .bi-x {
+    color: #444444;
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.discription_wj .cancle_line_wj {
+    color: #444444;
+    opacity: 0.4;
+    text-decoration: line-through;
+}
 
 /* TESTIMONIALS 부분 */
 .testimonials_wj {
@@ -184,7 +217,7 @@
     height: 100%;
     justify-content: center;
     align-items: center;
-    animation: slide 20s ease-in-out infinite;
+    animation: slide_wj 20s ease-in-out infinite;
     gap: 5px;
 }
 
@@ -232,7 +265,7 @@
     animation-delay: 16s;
 }
 
-@keyframes slide {
+@keyframes slide_wj {
     0%, 15% {
         transform: translateX(0);
         opacity: 0;
