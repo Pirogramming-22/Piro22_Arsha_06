@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.price_wj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f6f8;
+    padding-block: 40px;
+}
+
+.title__container_wj {
+    text-align: center;
+}
+
+.title_wj {
+    position: relative;
+    padding-bottom: 20px;
+    color: #37517e;
+}
+
+.title_wj::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 110px;
+    height: 2px;
+    background: #444444;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    margin: auto;
+}
+
+.title_wj::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #47b2e4;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.subtitle_wj {
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.item__container_wj {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    padding-block: 40px;
+}
+
+.items_wj {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 100px;
+    padding-block: 50px;
+    border-radius: 6px;
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1)
+}
+
+.itemPrice_wj {
+    display: flex;
+    position: relative;
+    align-items:first baseline
+}
+
+.itemType_wj {
+    color: #37517e;
+}
+
+.unit_wj {
+    position: absolute;
+    color: #47b2e4;
+    font-size: 25px;
+    font-weight: 20;
+    padding-top: 8px;
+}
+
+.cost_wj {
+    color: #47b2e4;
+    font-size: 40px;
+    vertical-align: baseline;
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.period_wj {
+    padding-left: 5px;
+    opacity: 0.3;
+    font-weight: 400;
+}
+
+.list_wj {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.discription_wj {
+    list-style-type: none;
+    font-weight: 10;
+    font-size: 15px;
+}
+
+.buyButton_wj {
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 57%;
+    padding: 8px 35px 10px 35px;
+    background-color: white;
+    border: 1px solid #47b2e4;
+    color: #47b2e4;
+    font-weight: 600;
+}
+
+.buyButton__selected_wj {
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 57%;
+    padding: 8px 35px 10px 35px;
+    background-color: #47b2e4;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
