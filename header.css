@@ -7,7 +7,6 @@
 .header {
     display: flex;
     flex-direction: column;
-    
     top: 0; /* 화면 상단에 고정 */
     width: 100%; /* 전체 너비 */
     z-index: 1000; /* 다른 요소 위에 표시 */
@@ -19,6 +18,9 @@
 
 .svg-icon_jh {
     filter: invert(100%);
+}
+a {
+    text-decoration: none;
 }
 /* ------------------------------------------- */
 .main {
@@ -119,8 +121,8 @@
 }
 .siteName_jh {
     color: white;
-    
 }
+
 .navs_jh {
     display: flex;
     flex-wrap: wrap; /* 줄바꿈 허용 */
@@ -152,7 +154,7 @@
 @media (max-width: 767px) {
     .header-top_jh {
         justify-content: space-between; /* 좌우 정렬 */
-        padding: 10px; /* 패딩 조정 */
+        
     }
 
     .top-left_jh {
@@ -225,6 +227,10 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    gap: 10px;
+}
+.videoLink_jh img {
+    width: 30px;
 }
 .intro-right_jh img {
     
@@ -236,6 +242,7 @@
 .videoLink_jh span {
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 
 /* 애니메이션 정의 */
@@ -383,21 +390,19 @@
 }
 /* ------------------------------------------- */
 
+
+
 .main-second_jh {
     background-color: #f5f6f8;
-    
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap:200px;
     padding-top: 40px;
     padding-bottom: 40px;
     
 }
 
-/* 컨테이너 스타일 */
-.secondBoxContainer {
-    
-    width: 100%; /* 부모 너비 */
-}
 
 /* 박스 스타일 */
 .secondBox_jh {
@@ -407,11 +412,11 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     max-height: 100px; /* 기본 높이 */
-    
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10px;
 }
-
-
 
 .Number_jh {
     color: #00a6eb;
@@ -433,6 +438,15 @@
 .secondRight_jh img {
     height: 300px;
 }
+@media (max-width: 991px) {
+    .main-second_jh {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
 
 /* ------------------------------------------- */
 .thirdLeft_jh img {
