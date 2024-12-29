@@ -192,6 +192,7 @@
     cursor: pointer;
     background-color: transparent;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .call-to-action-button_sy:hover {
