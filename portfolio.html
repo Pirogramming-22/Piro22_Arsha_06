@@ -1,146 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="portfolio.css">
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="portfolio.css" />
 </head>
 <body>
-    <section id="section-portfolio_SA">
+  <section id="section-portfolio_SA">
 
-        <div class="portfolio_top_SA">
-            <div class="title_SA">PORTFOLIO</div>
-            <div class="deco_line_SA"></div>
-            <div class="text_SA">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</div>
+    <div class="portfolio_top_SA">
+      <div class="title_SA">PORTFOLIO</div>
+      <div class="deco_line_SA"></div>
+      <div class="text_SA">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</div>
+    </div>
+
+    <input type="radio" name="filter" id="filter-all_SA" checked />
+    <label for="filter-all_SA">All</label>
+
+    <input type="radio" name="filter" id="filter-app_SA" />
+    <label for="filter-app_SA">App</label>
+
+    <input type="radio" name="filter" id="filter-card_SA" />
+    <label for="filter-card_SA">Card</label>
+
+    <input type="radio" name="filter" id="filter-web_SA" />
+    <label for="filter-web_SA">Web</label>
+
+    <div class="img-container_SA">
+      <!-- App1 -->
+      <div class="image-item_SA" id="item1_SA">
+        <img src="./portfolio-img1.jpg" alt="App1" id="App1_img_SA" />
+        <div class="forhover_SA">
+          <div class="name_SA">App1</div>
+          <div class="info_SA">Lorem ipsum, dolor sit</div>
+          <div class="buttons_SA">
+            <!-- 수정: href="#modalApp1_SA" -->
+            <a class="plus_SA" href="#modalApp1_SA"
+              ><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"
+            /></a>
+            <a
+              href="https://bootstrapmade.com/demo/Arsha/"
+              class="details_SA"
+              target="_blank"
+              ><img src="./details.png" alt="자세히"
+            /></a>
+          </div>
         </div>
+      </div>
 
-        <input type="radio" name="filter" id="filter-all_SA" checked>
-        <label for="filter-all_SA">All</label>
-                
-        <input type="radio" name="filter" id="filter-app_SA">
-        <label for="filter-app_SA">App</label>
-                
-        <input type="radio" name="filter" id="filter-card_SA">
-        <label for="filter-card_SA">Card</label>
-                
-        <input type="radio" name="filter" id="filter-web_SA">
-        <label for="filter-web_SA">Web</label>
-
-        <div class="img-container_SA">
-            <div class="image-item_SA" id="item1_SA">
-                <img src="./portfolio-img1.jpg" alt="App1" id="App1_img_SA">
-                <div class="forhover_SA">
-                    <div class="name_SA">App1</div>
-                    <div class="info_SA">Lorem ipsum, dolor sit</div>
-                    <div class="buttons_SA">
-                        <button class="plus_SA"><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"></button>
-                        <button class="details_SA"><a href="#"><img src="./details.png" alt="자세히"></a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-item_SA" id="item2_SA">
-                <img src="./portfolio-img2.jpg" alt="Product1" id="Product1_img_SA">
-                <div class="forhover_SA">
-                    <div class="name_SA">Product1</div>
-                    <div class="info_SA">Lorem ipsum, dolor sit</div>
-                    <div class="buttons_SA">
-                        <button class="plus_SA"><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"></button>
-                        <button class="details_SA"><a href="#"><img src="./details.png" alt="자세히"></a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-item_SA" id="item3_SA">
-                <img src="./portfolio-img3.jpg" alt="Branding1" id="Branding1_img_SA">
-                <div class="forhover_SA">
-                    <div class="name_SA">Branding1</div>
-                    <div class="info_SA">Lorem ipsum, dolor sit</div>
-                    <div class="buttons_SA">
-                        <button class="plus_SA"><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"></button>
-                        <button class="details_SA"><a href="#"><img src="./details.png" alt="자세히"></a></button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="image-item_SA" id="item4_SA">
-                <img src="./portfolio-img4.jpg" alt="App2" id="App2_img_SA">
-                <div class="forhover_SA">
-                    <div class="name_SA">App2</div>
-                    <div class="info_SA">Lorem ipsum, dolor sit</div>
-                    <div class="buttons_SA">
-                        <button class="plus_SA"><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"></button>
-                        <button class="details_SA"><a href="#"><img src="./details.png" alt="자세히"></a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-item_SA" id="item5_SA">
-                <img src="./portfolio-img5.jpg" alt="Product2" id="Product2_img_SA">
-                <div class="forhover_SA">
-                    <div class="name_SA">Product2</div>
-                    <div class="info_SA">Lorem ipsum, dolor sit</div>
-                    <div class="buttons_SA">
-                        <button class="plus_SA"><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"></button>
-                        <button class="details_SA"><a href="#"><img src="./details.png" alt="자세히"></a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-item_SA" id="item6_SA">
-                <img src="./portfolio-img6.jpg" alt="Branding2" id="Branding2_SA">
-                <div class="forhover_SA">
-                    <div class="name_SA">Branding2</div>
-                    <div class="info_SA">Lorem ipsum, dolor sit</div>
-                    <div class="buttons_SA">
-                        <button class="plus_SA"><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"></button>
-                        <button class="details_SA"><a href="#"><img src="./details.png" alt="자세히"></a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-item_SA" id="item7_SA">
-                <img src="./portfolio-img7.jpg" alt="App3" id="App3_img_SA">
-                <div class="forhover_SA">
-                    <div class="name_SA">App3</div>
-                    <div class="info_SA">Lorem ipsum, dolor sit</div>
-                    <div class="buttons_SA">
-                        <button class="plus_SA"><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"></button>
-                        <button class="details_SA"><a href="#"><img src="./details.png" alt="자세히"></a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-item_SA" id="item8_SA">
-                <img src="./portfolio-img8.jpg" alt="Product3" id="Product3_img_SA">
-                <div class="forhover_SA">
-                    <div class="name_SA">Product3</div>
-                    <div class="info_SA">Lorem ipsum, dolor sit</div>
-                    <div class="buttons_SA">
-                        <button class="plus_SA"><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"></button>
-                        <button class="details_SA"><a href="#"><img src="./details.png" alt="자세히"></a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="image-item_SA" id="item9_SA">
-                <img src="./portfolio-img9.jpg" alt="Branding3" id="Branding3_img_SA">
-                <div class="forhover_SA">
-                    <div class="name_SA">Branding3</div>
-                    <div class="info_SA">Lorem ipsum, dolor sit</div>
-                    <div class="buttons_SA">
-                        <button class="plus_SA"><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"></button>
-                        <button class="details_SA"><a href="#"><img src="./details.png" alt="자세히"></a></button>
-                    </div>
-                </div>
-            </div>
-
-
+      <!-- Product1 -->
+      <div class="image-item_SA" id="item2_SA">
+        <img src="./portfolio-img2.jpg" alt="Product1" id="Product1_img_SA" />
+        <div class="forhover_SA">
+          <div class="name_SA">Product1</div>
+          <div class="info_SA">Lorem ipsum, dolor sit</div>
+          <div class="buttons_SA">
+            <!-- 수정: href="#modalProduct1_SA" -->
+            <a class="plus_SA" href="#modalProduct1_SA"
+              ><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"
+            /></a>
+            <a
+              href="https://bootstrapmade.com/demo/Arsha/"
+              class="details_SA"
+              target="_blank"
+              ><img src="./details.png" alt="자세히"
+            /></a>
+          </div>
         </div>
-    </section>
-    
+      </div>
+
+      <!-- Branding1 -->
+      <div class="image-item_SA" id="item3_SA">
+        <img src="./portfolio-img3.jpg" alt="Branding1" id="Branding1_img_SA" />
+        <div class="forhover_SA">
+          <div class="name_SA">Branding1</div>
+          <div class="info_SA">Lorem ipsum, dolor sit</div>
+          <div class="buttons_SA">
+            <!-- 수정: href="#modalBranding1_SA" -->
+            <a class="plus_SA" href="#modalBranding1_SA"
+              ><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"
+            /></a>
+            <a
+              href="https://bootstrapmade.com/demo/Arsha/"
+              class="details_SA"
+              target="_blank"
+              ><img src="./details.png" alt="자세히"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- App2 -->
+      <div class="image-item_SA" id="item4_SA">
+        <img src="./portfolio-img4.jpg" alt="App2" id="App2_img_SA" />
+        <div class="forhover_SA">
+          <div class="name_SA">App2</div>
+          <div class="info_SA">Lorem ipsum, dolor sit</div>
+          <div class="buttons_SA">
+            <!-- 수정: href="#modalApp2_SA" -->
+            <a class="plus_SA" href="#modalApp2_SA"
+              ><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"
+            /></a>
+            <a
+              href="https://bootstrapmade.com/demo/Arsha/"
+              class="details_SA"
+              target="_blank"
+              ><img src="./details.png" alt="자세히"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product2 -->
+      <div class="image-item_SA" id="item5_SA">
+        <img src="./portfolio-img5.jpg" alt="Product2" id="Product2_img_SA" />
+        <div class="forhover_SA">
+          <div class="name_SA">Product2</div>
+          <div class="info_SA">Lorem ipsum, dolor sit</div>
+          <div class="buttons_SA">
+            <a class="plus_SA" href="#modalProduct2_SA"
+              ><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"
+            /></a>
+            <a
+              href="https://bootstrapmade.com/demo/Arsha/"
+              class="details_SA"
+              target="_blank"
+              ><img src="./details.png" alt="자세히"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Branding2 -->
+      <div class="image-item_SA" id="item6_SA">
+        <img src="./portfolio-img6.jpg" alt="Branding2" id="Branding2_img_SA" />
+        <div class="forhover_SA">
+          <div class="name_SA">Branding2</div>
+          <div class="info_SA">Lorem ipsum, dolor sit</div>
+          <div class="buttons_SA">
+            <a class="plus_SA" href="#modalBranding2_SA"
+              ><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"
+            /></a>
+            <a
+              href="https://bootstrapmade.com/demo/Arsha/"
+              class="details_SA"
+              target="_blank"
+              ><img src="./details.png" alt="자세히"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- App3 -->
+      <div class="image-item_SA" id="item7_SA">
+        <img src="./portfolio-img7.jpg" alt="App3" id="App3_img_SA" />
+        <div class="forhover_SA">
+          <div class="name_SA">App3</div>
+          <div class="info_SA">Lorem ipsum, dolor sit</div>
+          <div class="buttons_SA">
+            <a class="plus_SA" href="#modalApp3_SA"
+              ><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"
+            /></a>
+            <a
+              href="https://bootstrapmade.com/demo/Arsha/"
+              class="details_SA"
+              target="_blank"
+              ><img src="./details.png" alt="자세히"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product3 -->
+      <div class="image-item_SA" id="item8_SA">
+        <img src="./portfolio-img8.jpg" alt="Product3" id="Product3_img_SA" />
+        <div class="forhover_SA">
+          <div class="name_SA">Product3</div>
+          <div class="info_SA">Lorem ipsum, dolor sit</div>
+          <div class="buttons_SA">
+            <a class="plus_SA" href="#modalProduct3_SA"
+              ><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"
+            /></a>
+            <a
+              href="https://bootstrapmade.com/demo/Arsha/"
+              class="details_SA"
+              target="_blank"
+              ><img src="./details.png" alt="자세히"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Branding3 -->
+      <div class="image-item_SA" id="item9_SA">
+        <img src="./portfolio-img9.jpg" alt="Branding3" id="Branding3_img_SA" />
+        <div class="forhover_SA">
+          <div class="name_SA">Branding3</div>
+          <div class="info_SA">Lorem ipsum, dolor sit</div>
+          <div class="buttons_SA">
+            <a class="plus_SA" href="#modalBranding3_SA"
+              ><img src="/Piro22_Arsha_06/plus.png" alt="크게 보기"
+            /></a>
+            <a
+              href="https://bootstrapmade.com/demo/Arsha/"
+              class="details_SA"
+              target="_blank"
+              ><img src="./details.png" alt="자세히"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 아래는 모달들: ID가 위에서 링크한 href와 일치하도록 _SA를 붙임 -->
+
+    <!-- App1 -->
+    <div class="modal_SA" id="modalApp1_SA">
+      <a href="#" class="overlay_SA"></a>
+      <div class="modal_content_SA">
+        <a href="#" class="close_btn_SA">X</a>
+        <img src="./portfolio-img1.jpg" alt="App1 Full View" />
+      </div>
+    </div>
+
+    <!-- App2 -->
+    <div class="modal_SA" id="modalApp2_SA">
+      <a href="#" class="overlay_SA"></a>
+      <div class="modal_content_SA">
+        <a href="#" class="close_btn_SA">X</a>
+        <img src="./portfolio-img4.jpg" alt="App2 Full View" />
+      </div>
+    </div>
+
+    <!-- App3 -->
+    <div class="modal_SA" id="modalApp3_SA">
+      <a href="#" class="overlay_SA"></a>
+      <div class="modal_content_SA">
+        <a href="#" class="close_btn_SA">X</a>
+        <img src="./portfolio-img7.jpg" alt="App3 Full View" />
+      </div>
+    </div>
+
+    <!-- Product1 -->
+    <div class="modal_SA" id="modalProduct1_SA">
+      <a href="#" class="overlay_SA"></a>
+      <div class="modal_content_SA">
+        <a href="#" class="close_btn_SA">X</a>
+        <img src="./portfolio-img2.jpg" alt="Product1 Full View" />
+      </div>
+    </div>
+
+    <!-- Product2 -->
+    <div class="modal_SA" id="modalProduct2_SA">
+      <a href="#" class="overlay_SA"></a>
+      <div class="modal_content_SA">
+        <a href="#" class="close_btn_SA">X</a>
+        <img src="./portfolio-img5.jpg" alt="Product2 Full View" />
+      </div>
+    </div>
+
+    <!-- Product3 -->
+    <div class="modal_SA" id="modalProduct3_SA">
+      <a href="#" class="overlay_SA"></a>
+      <div class="modal_content_SA">
+        <a href="#" class="close_btn_SA">X</a>
+        <img src="./portfolio-img8.jpg" alt="Product3 Full View" />
+      </div>
+    </div>
+
+    <!-- Branding1 -->
+    <div class="modal_SA" id="modalBranding1_SA">
+      <a href="#" class="overlay_SA"></a>
+      <div class="modal_content_SA">
+        <a href="#" class="close_btn_SA">X</a>
+        <img src="./portfolio-img3.jpg" alt="Branding1 Full View" />
+      </div>
+    </div>
+
+    <!-- Branding2 -->
+    <div class="modal_SA" id="modalBranding2_SA">
+      <a href="#" class="overlay_SA"></a>
+      <div class="modal_content_SA">
+        <a href="#" class="close_btn_SA">X</a>
+        <img src="./portfolio-img6.jpg" alt="Branding2 Full View" />
+      </div>
+    </div>
+
+    <!-- Branding3 -->
+    <div class="modal_SA" id="modalBranding3_SA">
+      <a href="#" class="overlay_SA"></a>
+      <div class="modal_content_SA">
+        <a href="#" class="close_btn_SA">X</a>
+        <img src="./portfolio-img9.jpg" alt="Branding3 Full View" />
+      </div>
+    </div>
+  </section>
 </body>
 </html>
