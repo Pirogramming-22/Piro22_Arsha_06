@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    top: 0; /* 화면 상단에 고정 */
+    width: 100%; /* 전체 너비 */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+}
+.header.sticky {
+    background-color: rgba(55, 81, 126, 0.7); /* 반투명 상태 */
+    backdrop-filter: blur(3px); /* 블러 효과 줄이기 */
+}
+
+.svg-icon_jh {
+    filter: invert(100%);
+}
+a {
+    text-decoration: none;
+}
+/* ------------------------------------------- */
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-top_jh {
+    background: #023b6d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* 고정 위치 */
+    top: 0; /* 화면 상단에 위치 */
+    left: 0; /* 화면 왼쪽에 위치 */
+    width: 100%; /* 전체 화면 너비 */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+    box-sizing: border-box; /* 패딩 포함한 전체 너비 계산 */
+}
+
+.top-logo_jh img {
+    height: 25px;
+    margin: 0 10px;
+}
+
+.top-left_jh {
+    display: flex;
+    align-items: center;
+}
+
+.top-logo_jh img {
+    height: 25px;
+    margin: 0 10px;
+}
+.top-viewlogo_jh {
+    margin-left: 10px;
+}
+.top-viewlogo_jh a{
+    padding: 3px;
+}
+
+.pageChange_jh {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    gap: 10px;
+    font-weight: bold;
+}
+.pageChange_jh span {
+    color: white;
+}
+.top-right_jh {
+    display: flex;
+    align-items: center;
+}
+.externalLink_jh {
+    margin-right: 15px;
+}
+.download_jh {
+    background: #00a6eb;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    font-weight: bold;
+    gap: 5px;
+    padding: 0 15px;
+}
+.download_jh a {
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+}
+.download_jh a {
+    text-decoration: none;
+    color: white;
+}   
+/* ------------------------------------------- */
+.header-nav_jh {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #37517e;
+    border-bottom: 1px solid black;
+    padding: 15px 50px;
+    position: fixed; /* 고정 위치 */
+    top: 30px; /* 헤더 상단 바로 아래에 위치 */
+    width: 100%; /* 전체 너비 */
+    z-index: 999; /* 헤더보다 한 단계 아래 */
+}
+
+.nav-right_jh {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.siteName_jh {
+    color: white;
+}
+
+.navs_jh {
+    display: flex;
+    flex-wrap: wrap; /* 줄바꿈 허용 */
+    justify-content: center; /* 중앙 정렬 */
+    gap: 20px; /* 요소 간 간격 */
+    margin-left: 0; /* 고정된 마진 제거 */
+}
+.navs_jh a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+#Home:hover {color: #00a6eb;}
+#About:hover {color: #00a6eb;}
+#Services:hover {color: #00a6eb;}
+#Portfolio:hover {color: #00a6eb;}
+#Team:hover {color: #00a6eb;}
+#Pricing:hover {color: #00a6eb;}
+.dropdown_jh:hover a{color: #00a6eb;}
+
+.dropdown_jh {
+    display: flex;
+    gap: 0;
+}
+
+.startButton_jh {
+    background: #00a6eb;
+    padding: 8px 25px;
+    border-radius: 50px;
+}
+.startButton_jh a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .header-top_jh {
+        justify-content: space-between; /* 좌우 정렬 */
+        
+    }
+
+    .top-left_jh {
+        display: none; /* 화면에서 숨김 */
+    }
+
+    .pageChange_jh {
+        position: static; /* 고정 해제 */
+        transform: none; /* 초기화 */
+        left: 0; /* 맨 왼쪽 정렬 */
+        font-size: 14px; /* 글씨 크기 조정 */
+        gap: 5px; /* 간격 축소 */
+    }
+
+    .top-right_jh {
+        margin-left: auto; /* 맨 오른쪽 정렬 */
+    }
+
+    .download_jh {
+        padding: 5px 10px; /* 다운로드 버튼 크기 조정 */
+        font-size: 12px; /* 텍스트 크기 축소 */
+    }
+}
+.hamburger {
+    display: none; /* 디폴트로 숨김 */
+}
+@media (max-width: 1199px) {
+    .navs_jh {
+        display: none; /* navs 숨김 */
+    }
+
+    .hamburger{
+        display: block; /* 햄버거 메뉴 보이게 */
+        position: absolute;
+        right: 20px; /* 맨 왼쪽에 배치 */
+        cursor: pointer;
+    }
+}
+/* 기본적으로 햄버거 메뉴 숨김 */
+
+/* ------------------------------------------- */
+.intro_jh {
+    background-color: #37517e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 90px;
+    gap: 70px;
+    color: white;
+}
+
+
+.intro-title_jh {
+    font-size: 48px; /* 제목 크기 증가 */
+    line-height: 1.2; /* 행 간격 */
+}
+
+.intro-text_jh {
+    font-size: 18px; /* 본문 텍스트 크기 증가 */
+    color: lightgrey;
+}
+
+.intro-left-bottom_jh {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+.videoLink_jh {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+}
+.videoLink_jh img {
+    width: 30px;
+}
+.intro-right_jh img {
+    
+    width: 600px; /* 이미지 최대 크기 설정 */
+    height: auto; /* 비율 유지 */
+    animation: floatUpDown 2s infinite ease-in-out; /* 애니메이션 적용 */
+}
+
+.videoLink_jh span {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* 애니메이션 정의 */
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0); /* 기본 위치 */
+    }
+    50% {
+        transform: translateY(-20px); /* 위로 2px 이동 */
+    }
+}
+
+@media (max-width: 991px) {
+    .intro_jh {
+        flex-direction: column-reverse; /* 수직 정렬로 변경 */
+        gap: 20px; /* 요소 간 간격 조정 */
+        align-items: center; /* 가운데 정렬 */
+        text-align: center; /* 텍스트 가운데 정렬 */
+    }
+
+    .intro-right_jh img {
+        width: 80%; /* 이미지 크기 조정 */
+        height: auto; /* 비율 유지 */
+    }
+
+    .intro-title_jh, .intro-text_jh {
+        text-align: start; /* 텍스트 가운데 정렬 */
+    }
+}
+
+
+/* ------------------------------------------- */
+.banner_jh {
+    background-color: #f5f6f8;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* 줄바꿈 허용 */
+    padding: 20px 0;
+}
+.banner_jh img {
+    height: 50px; /* 이미지 높이 */
+}
+/* ------------------------------------------- */
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-underline_jh {
+    width: 60px; /* 파란색 선의 너비 */
+    height: 4px; /* 파란색 선의 높이 */
+    background-color: #00a6eb; /* 파란색 */
+    margin: 10px auto; /* 수평 중앙 정렬 */
+    position: relative; /* 가상 요소 기준 설정 */
+}
+
+.title-underline_jh::before,
+.title-underline_jh::after {
+    content: ''; /* 가상 요소 */
+    position: absolute;
+    top: 50%; /* 파란색 선의 중앙 정렬 */
+    height: 1px; /* 얇은 회색 선의 두께 */
+    width: 60px; /* 얇은 선의 길이 */
+    background-color: #c0c0c0; /* 회색 선 색상 */
+}
+
+.title-underline_jh::before {
+    left: -60px; /* 파란색 선 왼쪽 끝에 붙임 */
+}
+
+.title-underline_jh::after {
+    right: -60px; /* 파란색 선 오른쪽 끝에 붙임 */
+}
+.main-title_jh {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+    color: #37517e;
+    font-size: 25px;
+}
+.main-text_jh {
+    display: flex;
+    justify-content: space-around;
+}
+.main-left_jh {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.left-text-top_jh {
+    line-height: 1.5;
+}
+.right-text-top_jh {
+    line-height: 1.5;;
+}
+.left-text-bottom_jh {
+    display: flex;
+    gap: 5px;
+}
+.left-text-bottom_jh img {
+    filter: invert(50%) sepia(92%) saturate(400%) hue-rotate(180deg) brightness(90%) contrast(110%);
+}
+.main-first_jh {
+    
+    padding-bottom: 60px;
+    border-bottom: 1px solid black;
+}
+.main-right_jh {
+    display: flex; /* Flexbox 설정 */
+    flex-direction: column; /* 수직 정렬 */
+    gap: 20px; /* 요소 간 간격 */
+}
+.right-text-bottom_jh {
+    border: 2px solid #00a6eb; /* 파란색 테두리 */
+    border-radius: 8px; /* 둥근 모서리 */
+    padding: 10px 30px; /* 내부 여백 */
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: fit-content;
+}
+.right-text-bottom_jh:hover {
+    background: #00a6eb; /* 배경색 변경 */
+}
+
+.right-text-bottom_jh:hover a {
+    color: white; /* 텍스트 색상을 흰색으로 변경 */
+}
+.right-text-bottom_jh:hover img {
+    filter: invert(100%) brightness(200%);
+}
+.right-text-bottom_jh a {
+    text-decoration: none;
+    color:#00a6eb;
+    font-weight: bold;
+}
+.right-text-bottom_jh img {
+    filter: invert(50%) sepia(92%) saturate(400%) hue-rotate(180deg) brightness(90%) contrast(110%);
+}
+
+@media (max-width: 991px) {
+    
+    .main-text_jh {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+    .main-right_jh {
+        margin-left: 40px;
+    }
+}
+/* ------------------------------------------- */
+
+
+
+.main-second_jh {
+    background-color: #f5f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:200px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+}
+
+
+/* 박스 스타일 */
+.secondBox_jh {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 100px; /* 기본 높이 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10px;
+}
+
+.Number_jh {
+    color: #00a6eb;
+}
+.boxTitle {
+    color: #023b6d;
+}
+
+.secondTitle_jh {
+    color: #023b6d;
+    font-size: 30px;
+}
+.secondText_jh {
+    color: gray;
+}
+.secondLeft_jh > * {
+    margin: 10px 0; 
+}
+.secondRight_jh img {
+    height: 300px;
+}
+@media (max-width: 991px) {
+    .main-second_jh {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+
+/* ------------------------------------------- */
+.thirdLeft_jh img {
+    height: 400px;
+}
+.main-third_jh {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px;
+}
+.thirdRight_jh {
+    display: flex; /* Flexbox 활성화 */
+    flex-direction: column; /* 수직 정렬 */
+    gap: 20px; /* 요소 간 간격 설정 */
+}
+.thirdTitle_jh {
+    font-size: 30px;
+    color: #023b6d;
+}
+.thirdText_jh {
+    font-style: italic;
+    color: gray;
+}
+.progress_jh {
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    gap: 10px; /* 제목과 바 사이 간격 */
+    width: 100%; /* 부모 요소 너비에 맞춤 */
+}
+
+.progressDescript_jh {
+    display: flex;
+    justify-content: space-between; /* 텍스트를 양쪽 정렬 */
+    align-items: center;
+    margin-bottom: 5px; /* 텍스트와 바 사이 간격 */
+    width: 100%; /* 부모 요소 너비에 맞춤 */
+}
+
+.progressDescript_jh p {
+    font-weight: bold;
+    color: #444444;
+    font-size: 15px;
+}
+
+.progressBar_jh {
+    width: 100%; /* 부모 요소 너비에 맞춤 */
+    height: 10px; /* 바 높이 */
+    background-color: #e8ebef; /* 바의 배경색 */
+    position: relative;
+    overflow: hidden; /* 내부 콘텐츠 넘침 방지 */
+    border-radius: 5px; /* 모서리 둥글게 */
+}
+
+.progressBar_jh::before {
+    content: '';
+    position: absolute;
+    height: 100%; /* 부모 높이에 맞춤 */
+    background-color: #37517e; /* 내부 바 색상 (파란색) */
+    width: 0; /* 기본 너비 (값에 따라 수정) */
+    
+}
+
+/* 각 스킬 별 너비 지정 */
+#HTML .progressBar_jh::before {
+    width: 100%; /* HTML의 퍼센트 */
+}
+#CSS .progressBar_jh::before {
+    width: 90%; /* CSS의 퍼센트 */
+}
+#JAVA .progressBar_jh::before {
+    width: 75%; /* JavaScript의 퍼센트 */
+}
+#PHOTOSHOP .progressBar_jh::before {
+    width: 55%; /* Photoshop의 퍼센트 */
+}
+
+@media (max-width: 991px) {
+    .main-third_jh {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
