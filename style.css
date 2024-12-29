@@ -302,6 +302,10 @@
     margin-bottom: 50px;
 }
 
+.subscribe-pg:focus-within .email-form-pg {
+    outline: 1px solid var(--accent-color);
+}
+
 .subscribe-form-pg {
     z-index: 2;
     position: relative;
