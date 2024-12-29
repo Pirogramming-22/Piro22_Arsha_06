@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+/* PRICING 부분 */
 .price_wj {
     display: flex;
     flex-direction: column;
@@ -14,6 +15,8 @@
 
 .title__container_wj {
     text-align: center;
+    margin-inline: 100px;
+    padding-inline: 12px;
 }
 
 .title_wj {
@@ -27,8 +30,9 @@
     position: absolute;
     display: block;
     width: 110px;
-    height: 2px;
+    height: 1px;
     background: #444444;
+    opacity: 0.3;
     left: 0;
     right: 0;
     bottom: 1px;
@@ -40,7 +44,7 @@
     position: absolute;
     display: block;
     width: 40px;
-    height: 4px;
+    height: 3px;
     background: #47b2e4;
     left: 0;
     right: 0;
@@ -119,21 +123,253 @@
 .buyButton_wj {
     margin-top: 40px;
     border-radius: 50px;
-    width: 57%;
-    padding: 8px 35px 10px 35px;
+    width: 110px;
+    padding-block: 10px;
     background-color: white;
     border: 1px solid #47b2e4;
     color: #47b2e4;
     font-weight: 600;
+    font-size: 12px;
 }
 
 .buyButton__selected_wj {
     margin-top: 40px;
     border-radius: 50px;
-    width: 57%;
-    padding: 8px 35px 10px 35px;
+    width: 110px;
+    padding-block: 10px;
     background-color: #47b2e4;
     border: none;
     color: white;
     font-weight: 600;
+    font-size: 12px;
+}
+
+
+/* TESTIMONIALS 부분 */
+.testimonials_wj {
+    padding-top: 40px;
+}
+
+.member__container_wj {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -30px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.memberImg_wj img {
+    width: 120x;
+    height: 120px;
+    border-radius: 50%;
+}
+.name_wj {
+    color: #37517e;
+}
+
+.job_wj {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.member_wj {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 100%; /* 화면 밖에서 시작 */
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: slide 20s ease-in-out infinite;
+    gap: 5px;
+}
+
+.info_wj {
+    text-align: center;
+    width: 55%;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.star_wj {
+    padding-block: 15px;
+}
+
+.bi-quote {
+    line-height: 1;
+    color: #47b2e4;
+    opacity: 0.5;
+    width: 25px;
+    height: 25px;
+}
+
+.bi-quote-rotated {
+    line-height: -1;
+    color: #47b2e4;
+    opacity: 0.5;
+    transform: rotate(180deg);
+    width: 25px;
+    height: 25px;
+}
+
+.member_wj:nth-child(1) {
+    animation-delay: 0s;
+}
+.member_wj:nth-child(2) {
+    animation-delay: 4s;
+}
+.member_wj:nth-child(3) {
+    animation-delay: 8s;
+}
+.member_wj:nth-child(4) {
+    animation-delay: 12s;
+}
+.member_wj:nth-child(5) {
+    animation-delay: 16s;
+}
+
+@keyframes slide {
+    0%, 15% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    20%, 35% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    40%, 55% {
+        transform: translateX(-200%);
+        opacity: 1;
+    }
+    60%, 100% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+}
+
+.star_wj {
+    display: flex;
+    gap: 2px;
+}
+
+.star_wj svg {
+    color: #ffc107;
+}
+
+/* Frequently Asked Questions 부분 */
+.questions_wj {
+    padding-block: 40px;
+    background-color: #f5f6f8;
+}
+
+.faq__container_wj {
+    padding-block: 40px;
+    padding-inline: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.faq_wj {
+    border: 1px solid #ddd;
+    background-color: white;
+    width: 1000px;
+    padding-inline: 10px;
+    padding-block: 10px;
+    overflow: hidden;
+}
+
+.toggle_faq {
+    display: none;
+}
+
+.qst_wj {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 10px 15px;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+
+.ans_wj {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 18px;
+    padding-left: 15px;
+    transition: max-height 0.7s linear
+}
+
+.toggle_faq:checked ~ .ans_wj {
+    max-height: 200px;
+}
+
+.toggle_faq:checked ~ .qst_wj .qst_txt_wj {
+    color: #47b2e4;
+}
+
+.toggle_faq:checked ~ .qst_wj .bi-chevron-right {
+    color: #47b2e4;
+    transform: rotate(90deg);
+    transition: transform 0.5s linear, color 0.3s linear;
+}
+
+.bi-question-circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    color: #47b2e4;
+}
+
+.qst_txt_wj {
+    margin-left: 35px;
+    color: #37517e;
+    transition: color 0.3s linear;
+}
+
+.qst_wj:hover .qst_txt_wj {
+    color: #47b2e4;
+}
+
+.bi-chevron-right {
+    position: absolute;
+    right: 0;
+    transform: rotate(0deg);
+    transition: transform 0.5s linear 0.5s, color 0.3s linear;
+}
+
+.bi-chevron-right:hover {
+    color: #47b2e4;
+    transition: color 0.3s linear
+}
+
+@media (max-width: 1400px) {
+    .items_wj {
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 990px) {
+    .item__container_wj {
+      grid-template-columns: 1fr;
+      width: 700px;
+    }
+    .faq_wj {
+        width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .item__container_wj {
+      grid-template-columns: 1fr;
+      width: 500px;
+    }
 }
