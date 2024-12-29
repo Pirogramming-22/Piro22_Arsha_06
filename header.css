@@ -135,6 +135,13 @@ a {
     color: white;
     font-size: 15px;
 }
+#Home:hover {color: #00a6eb;}
+#About:hover {color: #00a6eb;}
+#Services:hover {color: #00a6eb;}
+#Portfolio:hover {color: #00a6eb;}
+#Team:hover {color: #00a6eb;}
+#Pricing:hover {color: #00a6eb;}
+.dropdown_jh:hover a{color: #00a6eb;}
 
 .dropdown_jh {
     display: flex;
@@ -366,6 +373,16 @@ a {
     justify-content: center;
     gap: 5px;
     width: fit-content;
+}
+.right-text-bottom_jh:hover {
+    background: #00a6eb; /* 배경색 변경 */
+}
+
+.right-text-bottom_jh:hover a {
+    color: white; /* 텍스트 색상을 흰색으로 변경 */
+}
+.right-text-bottom_jh:hover img {
+    filter: invert(100%) brightness(200%);
 }
 .right-text-bottom_jh a {
     text-decoration: none;
