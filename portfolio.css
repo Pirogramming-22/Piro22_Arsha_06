@@ -51,6 +51,7 @@
 
 /* SECTION */
 #section-portfolio_SA {
+    scroll-margin-top: 100px;
     flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 100px;
@@ -293,16 +294,15 @@
 /* MODAL CONTAINER */
 .modal_SA {
     position: fixed;
-    top: 0;
+    top: 5%;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 95%;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s;
     z-index: 9990;
     box-sizing: border-box;
-    
 }
 .modal_SA:target {
     opacity: 1;
@@ -334,7 +334,7 @@
 
 .modal_title_SA {
     width: 100%;
-    height: 80px;
+    height: 100px;
     background-color: white;
     text-align: left;
     font-size: 16px;
@@ -419,7 +419,7 @@
 /* MODAL IMG */
 .modal_content_SA img {
     display: block;
-    max-height: 100%;
+    max-height: 90%;
     max-width: 90vh;
     object-fit: contain;
 }
