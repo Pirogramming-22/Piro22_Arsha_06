@@ -67,6 +67,10 @@
     flex-direction: row; 
     gap: 15px;
 }
+.team-card_sy:hover {
+    transform: translateY(-10px);
+    transition: all ease-in-out 0.4s;
+}
 .profile-image_sy img {
     border-radius: 50%;
     justify-content: center;

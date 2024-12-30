@@ -20,7 +20,7 @@
 }
 
 .title_wj {
-    scroll-margin-top: 150px;
+    scroll-margin-top: 140px;
     position: relative;
     padding-bottom: 20px;
     color: #37517e;
@@ -142,6 +142,11 @@
     font-size: 12px;
     text-align: center;
     text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.buyButton_wj:hover {
+    background-color: #47b2e4;
+    color: white;
 }
 
 .buyButton__selected_wj {
@@ -532,7 +537,7 @@
 }
 
 .Contact-title-pg {
-    scroll-margin-top: 150px;
+    scroll-margin-top: 140px;
     font-weight: bold;
     font-size: 32px;
     color: rgb(55, 81, 126);
