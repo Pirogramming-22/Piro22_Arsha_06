@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.Team-section_sy {
+    text-align: center;
+    background-color: white;
+    padding-top: 60px;
+}
+.team-section-header_sy {
+    margin: 0px 101px;
+    padding: 0px 12px 60px;
+}
+.team-section-title_sy {
+    scroll-margin-top: 150px;
+    font-size: 32px;
+    position: relative;
+    padding-bottom: 20px;
+    color: #37517e;
+}
+.team-section-title_sy::before, .team-section-title_sy::after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+.team-section-title_sy::before { /*가운데 회색 선*/
+    width: 160px;
+    height: 1px;
+    background: #444444;
+    opacity: 0.5;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1px;
+}
+.team-section-title_sy::after { /*가운데 하늘색 선*/
+    width: 40px;
+    height: 4px;
+    background: #47b2e4;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+}
+.team-section-description_sy {
+    font-size: 16px;
+    color: #444444;
+    padding-top: 20px;
+}
+.team-grid_sy {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    gap: 20px;
+    padding: 40px 117px;
+}
+.team-card_sy {
+    background-color: white;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 5px;
+    padding: 20px;
+    height: 100%;
+    max-width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; 
+    gap: 15px;
+}
+.team-card_sy:hover {
+    transform: translateY(-10px);
+    transition: all ease-in-out 0.4s;
+}
+.profile-image_sy img {
+    border-radius: 50%;
+    justify-content: center;
+    height: auto;
+    width: 150px;
+    height: 150px;
+}
+.profile-info_sy {
+    padding-left: 20px;
+    text-align: left;
+    flex: 1;
+}
+.profile-name_sy {
+    font-weight: 700;
+    margin: 0px 0px 5px;
+    font-size: 20px;
+    color: #37517e;
+    text-align: left;
+}
+.profile-job_sy {
+    display: block;
+    font-size: 15px;
+    padding: 0 0 10px;
+    position:relative;
+    font-weight: 500;
+    color: #444444;
+    margin: 0;
+    text-align: left;
+}
+.profile-job_sy::after {
+    content: ""; 
+    position: absolute; 
+    bottom: -2px; 
+    left: 0; 
+    width: 50px; 
+    height: 1px; 
+    background-color: #868686;
+    opacity: 0.3;
+    z-index: 1;
+}
+.profile-reflections_sy {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    color: #444444;
+    text-align: left;
+}
+.profile-socials_sy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 12px;
+    width: 100%; 
+}
+.profile-socials_sy div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; 
+    height: 36px;
+    border-radius: 50%; 
+    background-color: rgba(68, 68, 68, 0.06); 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+}
+.profile-socials_sy div:hover {
+    background-color: #47b2e4;
+}
+.profile-socials_sy div svg {
+    width: 20px;
+    height: 20px;
+    fill: #444444d8;
+    transition: fill 0.3s ease; 
+}
+.profile-socials_sy div:hover svg {
+    fill: white;
+}
+
+/* 768px ~ 990px */
+@media screen and (max-width: 990px) and (min-width: 769px) {
+    .team-grid_sy {
+        grid-template-columns: repeat(1, 1fr); /* 1열 */
+        padding: 20px 60px;
+        padding-bottom: 30px;
+    }
+
+    .team-card_sy {
+        max-width: 600px; /* 더 넓은 카드 */
+        flex-direction: row; /* 이미지와 텍스트 나란히 배치 */
+        padding: 20px;
+    }
+
+    .profile-image_sy img {
+        width: 130px; /* 이미지 크기 조정 */
+        height: 130px;
+    }
+}
+
+/* 468px ~ 768px */
+@media screen and (max-width: 768px) and (min-width: 469px) {
+    .team-grid_sy {
+        grid-template-columns: repeat(1, 1fr); 
+        padding: 40px 31px;
+        padding-bottom: 30px;
+        
+    }
+    .team-card_sy {
+        max-width: 90%; 
+        flex-direction: row;  
+    }
+    .profile-image_sy img {
+        width: 120px;
+        height: 120px;
+    }
+    .profile-info_sy {
+        padding-left: 0;
+        margin-top: 15px; /* 이미지와 텍스트 간격 */
+    }
+}
+
+/* 468px 이하 */
+@media screen and (max-width: 468px) {
+    .team-grid_sy {
+        grid-template-columns: repeat(1, 1fr); /* 1열 */
+        padding: 10px;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+    .team-card_sy {
+        max-width: 100%;
+        flex-direction: column; /* 세로 배치 */
+        padding: 15px;
+        align-items: center; /* 카드 안의 콘텐츠를 가운데 정렬 */
+        text-align: center;
+    }
+    .profile-image_sy img {
+        width: 100px;
+        height: 100px;  
+    }
+    .profile-info_sy {
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: center; /* 텍스트 가운데 정렬 */
+        display: flex; /* Flexbox로 정렬 */
+        flex-direction: column; /* 세로 방향 정렬 */
+        align-items: center; /* 텍스트를 수평 가운데 정렬 */
+    }
+    .profile-reflections_sy {
+        text-align: center;
+    }
+    .profile-job_sy::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .profile-socials_sy {
+        justify-content: center; /* 아이콘 가운데 정렬 */
+        margin-top: 10px;
+    }
+}
