@@ -651,8 +651,8 @@ a {
     gap: 5px;
 }
 
-.left-text-bottom_jh img {
-    filter: invert(50%) sepia(92%) saturate(400%) hue-rotate(180deg) brightness(90%) contrast(110%);
+.left-text-bottom_jh svg {
+    color: #00a6eb;
 }
 
 .main-first_jh {
