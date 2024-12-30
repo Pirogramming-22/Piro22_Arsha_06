@@ -4,6 +4,9 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+#main-title_jh {
+    scroll-margin-top: 100px;
+}
 
 .header {
     display: flex;
@@ -244,7 +247,6 @@ a {
 .dropdown_jh:hover .dropdown-menu_jh {
     display: block;
     opacity: 1;
-<<<<<<< HEAD
     transform: translateY(0);
 }
 
@@ -304,11 +306,6 @@ a {
 
 
 
-=======
-    transform: translateY(0); 
-}
-
->>>>>>> 2bf901d02cd5d8331d74f8d5ff4f888091e0881b
 
 .startButton_jh {
     background: #00a6eb;
@@ -739,7 +736,7 @@ a {
     display: flex;
 }
 
-.qst_num_jh {
+.qst-num_jh {
     color: #00a6eb;
 }
 
