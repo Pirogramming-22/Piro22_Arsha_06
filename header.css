@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
 
 }
 .header {
@@ -61,6 +62,23 @@ a {
 .top-viewlogo_jh a{
     padding: 3px;
 }
+.top-viewlogo_jh svg {
+    color: grey;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.display_jh:hover svg{
+    color: white;
+}
+.display_jh:visited svg {
+    color: white;
+}
+.tablet_jh:hover svg {
+    color: white;
+}
+
+.phone_jh:hover svg {
+    color: white;
+}
 
 .pageChange_jh {
     display: flex;
@@ -71,6 +89,17 @@ a {
     gap: 10px;
     font-weight: bold;
 }
+
+.pageChange_jh svg {
+    color: gray;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.prev_jh:hover svg {
+    color: white;
+}
+.next_jh:hover svg {
+    color: white;
+}
 .pageChange_jh span {
     color: white;
 }
@@ -78,8 +107,13 @@ a {
     display: flex;
     align-items: center;
 }
-.externalLink_jh {
+.externalLink_jh svg{
     margin-right: 15px;
+    color: gray;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.externalLink_jh:hover svg{
+    color: white;
 }
 .download_jh {
     background: #00a6eb;
@@ -90,6 +124,10 @@ a {
     font-weight: bold;
     gap: 5px;
     padding: 0 15px;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.download_jh:hover {
+    background: lightblue;
 }
 .download_jh a {
     font-size: 13px;
@@ -134,6 +172,7 @@ a {
     text-decoration: none;
     color: white;
     font-size: 15px;
+    transition: background 0.5s ease, color 0.5s ease;
 }
 #Home:hover {color: #00a6eb;}
 #About:hover {color: #00a6eb;}
@@ -141,23 +180,69 @@ a {
 #Portfolio:hover {color: #00a6eb;}
 #Team:hover {color: #00a6eb;}
 #Pricing:hover {color: #00a6eb;}
-.dropdown_jh:hover a{color: #00a6eb;}
-
+.dropdown_jh:hover .dropdown-button_jh{color: #00a6eb;}
+.dropdown_jh:hover .outter-dropdown {color: #00a6eb;}
+#Contact:hover {color: #00a6eb;}
 .dropdown_jh {
-    display: flex;
+    display: inline-block;
     gap: 0;
+    position: relative;
+}
+.outter-dropdown{
+    color: white;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.inner-dropdown {
+    color: black
+}
+.dropdown-inner {
+    display: inline-block;
+}
+.inner-dropdown:hover {
+    color: #00a6eb;
+}
+
+.dropdown-menu_jh {
+    display: none;
+    position: absolute;
+    top: 100%; /* 버튼 바로 아래에 표시 */
+    left: 0;
+    background-color: white;
+    list-style-type: none;
+    padding: 10px 0;
+    z-index: 1000;
+    width: 150px;
+    border-radius: 4px;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.dropdown-menu_jh li {
+    padding: 5px 0; /* 항목 간 간격 */
+    padding-left: 25px; /* 항목 왼쪽 여백 추가 */
+}
+.dropdown-menu_jh li a {
+    color: black;
+}
+.dropdown-menu_jh li a:hover {
+    color: #00a6eb;
+}
+
+.dropdown_jh:hover .dropdown-menu_jh {
+    display: block; /* 버튼 위에 마우스를 올리면 메뉴 표시 */
 }
 
 .startButton_jh {
     background: #00a6eb;
     padding: 8px 25px;
     border-radius: 50px;
+    transition: background 0.5s ease, color 0.5s ease;
 }
 .startButton_jh a {
     text-decoration: none;
     color: white;
 }
-
+.startButton_jh:hover {
+    background: lightskyblue;
+}
 @media (max-width: 767px) {
     .header-top_jh {
         justify-content: space-between; /* 좌우 정렬 */
@@ -198,6 +283,11 @@ a {
         position: absolute;
         right: 20px; /* 맨 왼쪽에 배치 */
         cursor: pointer;
+        color: white;
+    }
+    .hamburger svg {
+        height: 28px;
+        width: 28px;
     }
 }
 /* 기본적으로 햄버거 메뉴 숨김 */
@@ -236,8 +326,23 @@ a {
     text-decoration: none;
     gap: 10px;
 }
-.videoLink_jh img {
-    width: 30px;
+.videoLink_jh span {
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.videoLink_jh svg {
+    width: 30px; /* SVG의 너비 */
+    height: 30px; /* SVG의 높이 */
+    transition: background 0.5s ease, color 0.5s ease;
+}
+.videoLink_jh:hover span{
+    color: #00a6eb;
+}
+.videoLink_jh:hover svg {
+    color: #00a6eb;
+}
+.videoLink_jh svg {
+    text-decoration: none;
+    color: white;
 }
 .intro-right_jh img {
     
@@ -282,17 +387,86 @@ a {
 
 
 /* ------------------------------------------- */
-.banner_jh {
-    background-color: #f5f6f8;
-    border-bottom: 1px solid black;
+
+.slider_container {
+    position: relative;
+    width: 100%;
+    height: 120px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* 줄바꿈 허용 */
-    padding: 20px 0;
+    align-items: center;
+    overflow: hidden;
+    background: #e8ebef;
 }
-.banner_jh img {
-    height: 50px; /* 이미지 높이 */
+.slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    animation: 60s cubic-bezier(1, 0.95, 0.565, 1) sliding infinite;
+    
 }
+.slider img {
+    height: 50px;
+    
+}
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide .caption {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    font-size: 5rem;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+    background: rgba(0, 0, 0, 0.348);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5rem;
+    border-radius: 0 2rem 2rem 0;
+}
+.slide.one,
+.slide.two,
+.slide.three,
+.slide.four,
+.slide.five,
+.slide.six,
+.slide.seven
+{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.img1_jh,
+.img2_jh,
+.img3_jh,
+.img4_jh,
+.img5_jh,
+.img6_jh,
+.img7_jh,
+.img8_jh {
+    display: inline-block; /* 호버 효과가 이미지에만 적용되도록 설정 */
+    transition: transform 0.3s ease-in-out; /* 부드러운 전환 효과 */
+}
+
+.img1_jh:hover,
+.img2_jh:hover,
+.img3_jh:hover,
+.img4_jh:hover,
+.img5_jh:hover,
+.img6_jh:hover,
+.img7_jh:hover,
+.img8_jh:hover {
+    transform: scale(1.1); /* 이미지 크기 확대 */
+}
+
 /* ------------------------------------------- */
 .section {
     display: flex;
@@ -346,7 +520,7 @@ a {
     line-height: 1.5;
 }
 .right-text-top_jh {
-    line-height: 1.5;;
+    line-height: 1.5;
 }
 .left-text-bottom_jh {
     display: flex;
@@ -373,6 +547,8 @@ a {
     justify-content: center;
     gap: 5px;
     width: fit-content;
+    transition: background 0.5s ease, color 0.5s ease;
+    
 }
 .right-text-bottom_jh:hover {
     background: #00a6eb; /* 배경색 변경 */
@@ -412,27 +588,93 @@ a {
 .main-second_jh {
     background-color: #f5f6f8;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap:200px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.secondLeft_jh {
+    display: flex;
+    flex-direction: column;
 }
 
 
-/* 박스 스타일 */
-.secondBox_jh {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-height: 100px; /* 기본 높이 */
+.faq__container_jh {
     display: flex;
-    justify-content: space-between;
+    
+}
+.qst-left_jh {
+    display: flex;
+}
+.qst_num_jh {
+    color:#00a6eb;
+}
+.faq_jh {
+    border: 1px solid #ddd;
+    background-color: white;
+    padding-inline: 10px;
+    padding-block: 10px;
+    overflow: hidden;
+    
+    
+    width: calc(100% ); /* 전체 너비에서 양쪽 간격 제거 */
+    overflow: hidden;
+}
+
+.toggle_faq_jh {
+    display: none;
+}
+
+.qst_jh {
+    display: flex;
+    position: relative;
     align-items: center;
-    height: 10px;
+    padding: 10px 15px;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+.qst_jh svg {
+    transition: color 0.3s linear;
+}
+.qst_jh:hover svg {
+    color:#00a6eb;
+}
+
+.ans_jh {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 18px;
+    padding-left: 15px;
+    line-height: 1.4;
+    color: #444444;
+    transition: max-height 0.7s linear;
+}
+
+.toggle_faq_jh:checked ~ .ans_jh {
+    max-height: 200px;
+}
+
+.toggle_faq_jh:checked ~ .qst_jh .qst_txt_jh {
+    color: #47b2e4;
+}
+
+.toggle_faq_jh:checked ~ .qst_jh .bi-chevron-right {
+    color: #47b2e4;
+    transform: rotate(90deg);
+    transition: transform 0.5s linear, color 0.3s linear;
+}
+
+.qst_txt_jh {
+    margin-left: 35px;
+    color: #37517e;
+    transition: color 0.3s linear;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.qst_jh:hover .qst_txt_jh {
+    color: #47b2e4;
 }
 
 .Number_jh {
@@ -442,18 +684,19 @@ a {
     color: #023b6d;
 }
 
-.secondTitle_jh {
+.second-title_jh {
     color: #023b6d;
     font-size: 30px;
+
 }
-.secondText_jh {
+.second-text_jh {
     color: gray;
 }
 .secondLeft_jh > * {
     margin: 10px 0; 
 }
 .secondRight_jh img {
-    height: 300px;
+    height: 400px;
 }
 @media (max-width: 991px) {
     .main-second_jh {
@@ -548,3 +791,46 @@ a {
         gap: 20px;
     }
 }
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0%);
+    }
+    10% {
+        transform: translateX(0%);
+    }
+    15% {
+        transform: translateX(-16.66%);
+    }
+    25% {
+        transform: translateX(-16.66%);
+    }
+    30% {
+        transform: translateX(-30%);
+    }
+    40% {
+        transform: translateX(-30%);
+    }
+    45% {
+        transform: translateX(-47%);
+    }
+    55% {
+        transform: translateX(-47%);
+    }
+    60% {
+        transform: translateX(-63%);
+    }
+    70% {
+        transform: translateX(-63%);
+    }
+    75% {
+        transform: translateX(-80%);
+    }
+    85% {
+        transform: translateX(-80%);
+    }
+    
+
+    
+    }
+    
