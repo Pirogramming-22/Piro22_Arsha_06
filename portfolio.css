@@ -1,5 +1,6 @@
 /* PORTFOLIO-TOP */
 .portfolio_top_SA {
+    scroll-margin-top: 150px;
     text-align: center;
     font-family: Jost, sans-serif;
     margin-bottom: 20px;
@@ -404,7 +405,7 @@
 .close_btn_SA {
     width: 40px; 
     height: 40px;
-    top: 10px;
+    top: 80px;
     right: 10px;
   }
 
