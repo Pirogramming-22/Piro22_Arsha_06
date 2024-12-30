@@ -82,6 +82,7 @@ a {
     transform: translate(-50%, -50%);
     gap: 10px;
     font-weight: bold;
+    justify-content: space-around;
 }
 
 .pageChange_jh svg {
@@ -92,6 +93,9 @@ a {
 .prev_jh:hover svg,
 .next_jh:hover svg {
     color: white;
+}
+.next_jh {
+    margin-left: 15px;
 }
 
 .pageChange_jh span {
@@ -590,6 +594,7 @@ a {
 
 .main-first_jh {
     padding-bottom: 60px;
+    background: white;
 }
 
 .main-right_jh {
@@ -790,7 +795,9 @@ a {
 .main-third_jh {
     display: flex;
     justify-content: space-around;
-    margin: 60px;
+    background: white;
+    padding: 60px 40px;
+    gap: 30px;
 }
 
 .thirdRight_jh {
