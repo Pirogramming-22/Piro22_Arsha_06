@@ -1,3 +1,455 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* PRICING 부분 */
+.price_wj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f6f8;
+    padding-block: 40px;
+}
+
+.title__container_wj {
+    text-align: center;
+    margin-inline: 100px;
+    padding-inline: 12px;
+}
+
+.title_wj {
+    position: relative;
+    padding-bottom: 20px;
+    color: #37517e;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.title_wj::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 1px;
+    background: #444444;
+    opacity: 0.3;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    margin: auto;
+}
+
+.title_wj::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #47b2e4;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.subtitle_wj {
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.item__container_wj {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    padding-block: 40px;
+}
+
+.items_wj {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    padding-left: 30px;
+    padding-right: 100px;
+    padding-block: 50px;
+    border-radius: 5px;
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #f5f6f8;
+}
+
+.items_main_wj {
+    border-top-color: #47b2e4;
+}
+
+.itemPrice_wj {
+    display: flex;
+    position: relative;
+    align-items:first baseline
+}
+
+.itemType_wj {
+    color: #37517e;
+}
+
+.unit_wj {
+    position: absolute;
+    color: #47b2e4;
+    font-size: 25px;
+    font-weight: 20;
+    padding-top: 8px;
+}
+
+.cost_wj {
+    color: #47b2e4;
+    font-size: 40px;
+    vertical-align: baseline;
+    padding-left: 15px;
+    font-weight: 400;
+}
+
+.period_wj {
+    padding-left: 5px;
+    opacity: 0.3;
+    font-weight: 400;
+}
+
+.list_wj {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.discription_wj {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-weight: 10;
+    font-size: 15px;
+}
+
+.buyButton_wj {
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 110px;
+    padding-block: 10px;
+    background-color: white;
+    border: 1px solid #47b2e4;
+    color: #47b2e4;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.buyButton__selected_wj {
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 110px;
+    padding-block: 10px;
+    background-color: #47b2e4;
+    border: none;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+.discription_wj .bi-check {
+    color: #059652;
+}
+
+.discription_wj span {
+    color: #444444;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.discription_wj .bi-x {
+    color: #444444;
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.discription_wj .cancle_line_wj {
+    color: #444444;
+    opacity: 0.4;
+    text-decoration: line-through;
+}
+
+/* TESTIMONIALS 부분 */
+.testimonials_wj {
+    padding-top: 40px;
+}
+
+.member__container_wj {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -30px;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.memberImg_wj img {
+    width: 120x;
+    height: 120px;
+    border-radius: 50%;
+}
+.name_wj {
+    color: #37517e;
+}
+
+.job_wj {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.member_wj {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 100%; /* 화면 밖에서 시작 */
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: slide_wj 20s ease-in-out infinite;
+    gap: 5px;
+}
+
+.info_wj {
+    text-align: center;
+    width: 55%;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.star_wj {
+    padding-block: 15px;
+}
+
+.bi-quote {
+    line-height: 1;
+    color: #47b2e4;
+    opacity: 0.5;
+    width: 25px;
+    height: 25px;
+}
+
+.bi-quote-rotated {
+    line-height: -1;
+    color: #47b2e4;
+    opacity: 0.5;
+    transform: rotate(180deg);
+    width: 25px;
+    height: 25px;
+}
+
+.member_wj:nth-child(1) {
+    animation-delay: 0s;
+}
+.member_wj:nth-child(2) {
+    animation-delay: 4s;
+}
+.member_wj:nth-child(3) {
+    animation-delay: 8s;
+}
+.member_wj:nth-child(4) {
+    animation-delay: 12s;
+}
+.member_wj:nth-child(5) {
+    animation-delay: 16s;
+}
+
+@keyframes slide_wj {
+    0%, 15% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    20%, 35% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    40%, 55% {
+        transform: translateX(-200%);
+        opacity: 1;
+    }
+    60%, 100% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+}
+
+.shifting_wj {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.swapper_wj {
+    display: flex;
+    position: absolute;
+    bottom: 80px;
+    gap: 10px;
+}
+
+.swap_button_wj {
+    background-color: #444444;
+    opacity: 0.15;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@keyframes lightUp {
+    0%, 15% {
+        background-color: #444444;
+        opacity: 0.15;
+    }
+    20%, 35% {
+        background-color: #47b2e4;
+        opacity: 1;
+    }
+    40%, 55% {
+        background-color: #444444;
+        opacity: 0.15;
+    }
+    60%, 100% {
+        background-color: #444444;
+    }
+}
+
+/* 버튼별 애니메이션 지연 시간 설정 */
+#swap_button1_wj {
+    animation: lightUp 20s infinite;
+    animation-delay: 0s;
+}
+#swap_button2_wj {
+    animation: lightUp 20s infinite;
+    animation-delay: 4s;
+}
+#swap_button3_wj {
+    animation: lightUp 20s infinite;
+    animation-delay: 8s;
+}
+#swap_button4_wj {
+    animation: lightUp 20s infinite;
+    animation-delay: 12s;
+}
+#swap_button5_wj {
+    animation: lightUp 20s infinite;
+    animation-delay: 16s;
+}
+
+
+.star_wj {
+    display: flex;
+    gap: 2px;
+}
+
+.star_wj svg {
+    color: #ffc107;
+}
+
+/* Frequently Asked Questions 부분 */
+.questions_wj {
+    padding-block: 40px;
+    background-color: #f5f6f8;
+}
+
+.faq__container_wj {
+    padding-block: 40px;
+    padding-inline: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.faq_wj {
+    border: 1px solid #ddd;
+    background-color: white;
+    width: 1000px;
+    padding-inline: 10px;
+    padding-block: 10px;
+    overflow: hidden;
+}
+
+.toggle_faq {
+    display: none;
+}
+
+.qst_wj {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 10px 15px;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: color 0.3s linear;
+}
+
+.ans_wj {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 18px;
+    padding-left: 15px;
+    transition: max-height 0.7s linear
+}
+
+.toggle_faq:checked ~ .ans_wj {
+    max-height: 200px;
+}
+
+.toggle_faq:checked ~ .qst_wj .qst_txt_wj {
+    color: #47b2e4;
+}
+
+.toggle_faq:checked ~ .qst_wj .bi-chevron-right {
+    color: #47b2e4;
+    transform: rotate(90deg);
+    transition: transform 0.5s linear, color 0.3s linear;
+}
+
+.bi-question-circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    color: #47b2e4;
+}
+
+.qst_txt_wj {
+    margin-left: 35px;
+    color: #37517e;
+    transition: color 0.3s linear;
+}
+
+.qst_wj:hover .qst_txt_wj {
+    color: #47b2e4;
+}
+
+.bi-chevron-right {
+    position: absolute;
+    right: 0;
+    transform: rotate(0deg);
+    transition: transform 0.5s linear 0.5s, color 0.3s linear;
+}
+
+.bi-chevron-right:hover {
+    color: #47b2e4;
+    transition: color 0.3s linear
+}
 :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
@@ -440,6 +892,30 @@
 }
 
 @media (max-width: 1400px) {
+    .items_wj {
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 990px) {
+    .item__container_wj {
+      grid-template-columns: 1fr;
+      width: 700px;
+    }
+    .faq_wj {
+        width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .item__container_wj {
+      grid-template-columns: 1fr;
+      width: 500px;
+    }
+}
+
+@media (max-width: 1400px) {
     .Contact-section-left-pg {
         width: 451px;
     } 
@@ -468,12 +944,8 @@
 }
 
 @media (max-width: 1062px) {
-    .footer-flex-item4-pg {
-        position: relative;
-        right: 220px;
-    }
     .sentence-pg {
-        width: 600px;
+        width: 295px;
     }
 }
 
@@ -492,6 +964,10 @@
         margin-top: 40px;
         width: 636px;
         height: 250px;
+    }
+    .footer-flex-item4-pg {
+        position: relative;
+        right: 220px;
     }
 }
 
