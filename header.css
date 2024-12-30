@@ -210,6 +210,7 @@ a {
     color: #00a6eb;
 }
 
+/* 기본 드롭다운 스타일 */
 .dropdown-menu_jh {
     position: absolute;
     top: 100%;
@@ -218,7 +219,7 @@ a {
     list-style-type: none;
     padding: 10px 0;
     z-index: 1000;
-    width: 150px;
+    width: 200px; /* 폭을 넓게 설정 */
     border-radius: 4px;
     transition: opacity 0.3s ease, transform 0.3s ease;
     margin-top: 20px;
@@ -243,9 +244,71 @@ a {
 .dropdown_jh:hover .dropdown-menu_jh {
     display: block;
     opacity: 1;
+<<<<<<< HEAD
+    transform: translateY(0);
+}
+
+/* 딥 드롭다운 스타일 */
+.deep-dropdown {
+    position: relative;
+}
+
+.deep-dropdown > a {
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: space-between; /* 텍스트와 아이콘 양쪽 정렬 */
+    align-items: center; /* 수직 정렬 */
+    padding-right: 10px; /* 오른쪽 간격 추가 */
+    display: inline;
+}
+
+.deep-dropdown svg {
+    margin-left: 15px; 
+}
+
+.deep-dropdown-menu {
+    position: absolute;
+    top: 0;
+    right: 100%; /* 왼쪽에 생성되도록 설정 */
+    background-color: white;
+    list-style-type: none;
+    padding: 10px 0;
+    z-index: 1000;
+    width: 180px; /* 폭 조정 */
+    border-radius: 4px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-right: 10px;
+    opacity: 0;
+    transform: translateX(10px); /* 초기 위치를 오른쪽으로 설정 */
+}
+
+.deep-dropdown:hover .deep-dropdown-menu,
+.deep-dropdown-menu:hover {
+    display: block;
+    opacity: 1;
+    transform: translateX(0); /* 원래 위치로 이동 */
+}
+
+.deep-dropdown-menu li {
+    padding: 5px 0;
+    padding-left: 15px;
+}
+
+.deep-dropdown-menu li a {
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.deep-dropdown-menu li a:hover {
+    color: #00a6eb;
+}
+
+
+
+=======
     transform: translateY(0); 
 }
 
+>>>>>>> 2bf901d02cd5d8331d74f8d5ff4f888091e0881b
 
 .startButton_jh {
     background: #00a6eb;
