@@ -34,7 +34,7 @@ HTML과 CSS만을 사용하여 Arsha 웹사이트를 클론 코딩합니다.
 
 ## 관련 링크
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
-- (https://bootstrapmade.com/demo/Arsha/)
+- https://bootstrapmade.com/demo/Arsha/
 
 ## GITHUB Repository
 - **Piro22_Arsha_06** Repository
