@@ -211,7 +211,6 @@ a {
 }
 
 .dropdown-menu_jh {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -223,6 +222,8 @@ a {
     border-radius: 4px;
     transition: opacity 0.3s ease, transform 0.3s ease;
     margin-top: 20px;
+    opacity: 0;
+    transform: translateY(10px); 
 }
 
 .dropdown-menu_jh li {
@@ -242,7 +243,9 @@ a {
 .dropdown_jh:hover .dropdown-menu_jh {
     display: block;
     opacity: 1;
+    transform: translateY(0); 
 }
+
 
 .startButton_jh {
     background: #00a6eb;
@@ -876,4 +879,4 @@ a {
         align-items: center;
         gap: 20px;
     }
-}
+} 
